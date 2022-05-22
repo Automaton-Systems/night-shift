@@ -39,6 +39,7 @@ import com.jmstudios.redmoon.Profile
 import com.jmstudios.redmoon.R
 
 import org.greenrobot.eventbus.Subscribe
+import com.topjohnwu.superuser.Shell
 
 class FilterFragment : PreferenceFragmentCompat() {
     //private var hasShownWarningToast = false
@@ -77,7 +78,12 @@ class FilterFragment : PreferenceFragmentCompat() {
     override fun onStart() {
         Log.i("onStart")
         super.onStart()
-        preferenceScreen.setEnabled(Permission.Overlay.isGranted || Config.useRoot)
+        if (Config.useRoot) {
+            val hasRoot = Shell.rootAccess()
+            preferenceScreen.setEnabled(hasRoot)
+        } else {
+            preferenceScreen.setEnabled(Permission.Overlay.isGranted)
+        )
         EventBus.register(profileSelectorPref)
         EventBus.register(this)
     }

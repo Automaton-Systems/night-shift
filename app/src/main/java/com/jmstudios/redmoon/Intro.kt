@@ -9,7 +9,6 @@ import androidx.fragment.app.Fragment
 
 import com.github.paolorotolo.appintro.AppIntro2
 import com.github.paolorotolo.appintro.AppIntroFragment
-import com.topjohnwu.superuser.Shell
 
 class Intro : AppIntro2() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -51,7 +50,6 @@ class Intro : AppIntro2() {
 
     private fun saveAndFinish() {
         Config.introShown = true
-        Shell.rootAccess()
         finish()
     }
 }
