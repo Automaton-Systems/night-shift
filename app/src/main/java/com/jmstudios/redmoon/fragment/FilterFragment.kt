@@ -83,7 +83,7 @@ class FilterFragment : PreferenceFragmentCompat() {
             preferenceScreen.setEnabled(hasRoot)
         } else {
             preferenceScreen.setEnabled(Permission.Overlay.isGranted)
-        )
+        }
         EventBus.register(profileSelectorPref)
         EventBus.register(this)
     }

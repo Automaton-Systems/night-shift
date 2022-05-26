@@ -49,16 +49,19 @@
             android:key="@string/pref_key_dark_theme"
             android:title="@string/pref_title_dark_theme"
             android:defaultValue="false" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/pref_category_button_backlight_disclaimer">
+
         <SwitchPreference
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:defaultValue="false"
             android:key="@string/pref_key_use_root"
-            android:title="@string/pref_title_use_root" />
-
-    </PreferenceCategory>
-
-    <PreferenceCategory android:title="@string/pref_category_button_backlight_disclaimer">
+            android:title="@string/pref_title_use_root"
+            android:summary="@string/pref_summary_use_root"
+            />
 
         <ListPreference
             android:key="@string/pref_key_button_backlight"

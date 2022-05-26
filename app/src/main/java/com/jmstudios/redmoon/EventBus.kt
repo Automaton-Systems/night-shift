@@ -35,6 +35,7 @@ class secureSuspendChanged     : Event
 class buttonBacklightChanged   : Event
 
 class overlayPermissionDenied  : Event
+class rootPermissionDenied     : Event
 class locationAccessDenied     : Event
 class changeBrightnessDenied   : Event
 

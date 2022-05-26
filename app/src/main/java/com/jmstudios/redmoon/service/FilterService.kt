@@ -45,11 +45,13 @@ import com.jmstudios.redmoon.manager.CurrentAppMonitor
 import com.jmstudios.redmoon.Notification
 import com.jmstudios.redmoon.Overlay
 import com.jmstudios.redmoon.overlayPermissionDenied
+import com.jmstudios.redmoon.rootPermissionDenied
 import com.jmstudios.redmoon.Profile
 import com.jmstudios.redmoon.ProfileEvaluator
 import com.jmstudios.redmoon.secureSuspendChanged
 
 import org.greenrobot.eventbus.Subscribe
+import com.topjohnwu.superuser.Shell
 
 class FilterService : Service() {
 
@@ -80,7 +82,7 @@ class FilterService : Service() {
 
     override fun onStartCommand(intent: Intent, flags: Int, startId: Int): Int {
         Log.i("onStartCommand($intent, $flags, $startId)")
-        if (Permission.Overlay.isGranted || Config.useRoot) {
+        fun fadeInOrOut() {
             val cmd = Command.getCommand(intent)
             val end = if (cmd.turnOn) activeProfile else mFilter.profile.off
             mAnimator.run {
@@ -92,10 +94,24 @@ class FilterService : Service() {
                 Log.i("Animating from ${mFilter.profile} to $end in $duration")
                 start()
             }
+        }
+        if (Config.useRoot) {
+            val hasRoot = Shell.rootAccess()
+            if (hasRoot) {
+                fadeInOrOut()
+            } else {
+                Log.i("Root permission denied.")
+                EventBus.post(rootPermissionDenied())
+                stopForeground(false)
+            }
         } else {
-            Log.i("Overlay permission denied.")
-            EventBus.post(overlayPermissionDenied())
-            stopForeground(false)
+            if (Permission.Overlay.isGranted) {
+                fadeInOrOut()
+            } else {
+                Log.i("Overlay permission denied.")
+                EventBus.post(overlayPermissionDenied())
+                stopForeground(false)
+            }
         }
 
         // Do not attempt to restart if the hosting process is killed by Android

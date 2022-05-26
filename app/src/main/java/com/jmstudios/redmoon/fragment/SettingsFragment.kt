@@ -30,7 +30,6 @@ import com.jmstudios.redmoon.scheduleChanged
 import com.jmstudios.redmoon.service.LocationUpdateService
 import com.jmstudios.redmoon.useLocationChanged
 
-import com.topjohnwu.superuser.Shell
 import org.greenrobot.eventbus.Subscribe
 import org.libreshift.preferences.TimePreference
 import org.libreshift.preferences.TimePreferenceDialogFragmentCompat
@@ -109,7 +108,6 @@ class SettingsFragment : PreferenceFragmentCompat() {
         updatePrefs()
         EventBus.register(this)
         LocationUpdateService.update()
-        rootPref.isVisible = Shell.rootAccess()
     }
 
     override fun onStop() {
