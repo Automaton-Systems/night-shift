@@ -19,23 +19,23 @@ class Intro : AppIntro2() {
 
         addSlide(AppIntroFragment.newInstance(getString(R.string.slide_title_welcome),
                 getString(R.string.slide_text_welcome),
-                R.drawable.intro_slide_1,
-                0xFFD32F2F.toInt()))
+                R.mipmap.ic_launcher,
+                getColor(R.color.color_primary)))
 
         addSlide(AppIntroFragment.newInstance(getString(R.string.slide_title_protect_eyes),
                 getString(R.string.slide_text_protect_eyes),
                 R.drawable.intro_slide_2,
-                0xFF2196F3.toInt()))
+                getColor(R.color.color_accent)))
 
         addSlide(AppIntroFragment.newInstance(getString(R.string.slide_title_improve_sleep),
                 getString(R.string.slide_text_improve_sleep),
                 R.drawable.intro_slide_3,
-                0xFF388E3C.toInt()))
+                getColor(R.color.color_primary_dark)))
 
         addSlide(AppIntroFragment.newInstance(getString(R.string.slide_title_get_started),
                 getString(R.string.slide_text_get_started),
                 R.drawable.intro_slide_4,
-                0xFFFFB300.toInt()))
+                getColor(R.color.text_disabled)))
     }
 
     override fun onSkipPressed(currentFragment: Fragment?) {
