@@ -29,21 +29,21 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
   <PreferenceCategory android:title="@string/pref_category_filter" android:layout="@layout/preferences_category">
-    <com.jmstudios.redmoon.preference.ProfileSelectorPreference
+    <com.systems.automaton.nightshift.preference.ProfileSelectorPreference
         android:key="@string/pref_key_profile_spinner"
         android:persistent="false"/>
 
-    <com.jmstudios.redmoon.preference.ColorSeekBarPreference
+    <com.systems.automaton.nightshift.preference.ColorSeekBarPreference
         android:title="@string/pref_title_color_temp"
         android:key="@string/pref_key_color"
         android:defaultValue="10" />
 
-    <com.jmstudios.redmoon.preference.IntensitySeekBarPreference
+    <com.systems.automaton.nightshift.preference.IntensitySeekBarPreference
         android:title="@string/pref_title_intensity"
         android:key="@string/pref_key_intensity"
         android:defaultValue="50" />
 
-    <com.jmstudios.redmoon.preference.DimSeekBarPreference
+    <com.systems.automaton.nightshift.preference.DimSeekBarPreference
         android:title="@string/pref_title_dim_level"
         android:key="@string/pref_key_dim"
         android:defaultValue="50" />
