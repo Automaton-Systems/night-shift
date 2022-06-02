@@ -44,7 +44,7 @@ class Notification(
 
         return NotificationCompat.Builder(context, getString(R.string.notification_channel_overlay_id)).apply {
             // Set notification appearance
-            setSmallIcon(R.drawable.notification_icon_half_moon)
+            setSmallIcon(R.drawable.ic_notification_icon)
             color    = ContextCompat.getColor(appContext, R.color.color_primary)
             priority = NotificationCompat.PRIORITY_MIN
 
