@@ -1,19 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+/*
  * Copyright (c) 2016  Marien Raat <marienraat@riseup.net>
- *
- *  This file is free software: you may copy, redistribute and/or modify it
- *  under the terms of the GNU General Public License as published by the Free
- *  Software Foundation, either version 3 of the License, or (at your option)
- *  any later version.
- *
- *  This file is distributed in the hope that it will be useful, but WITHOUT ANY
- *  WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- *  FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more
- *  details.
- *
- *  You should have received a copy of the GNU General Public License along with
- *  this program.  If not, see <http://www.gnu.org/licenses/>.
+ * Copyright (c) 2017  Stephen Michel <s@smichel.me>
+ * SPDX-License-Identifier: GPL-3.0-or-later
  *
  * This file incorporates work covered by the following copyright and
  * permission notice:
@@ -33,8 +21,20 @@
  *     OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT,
  *     NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN
  *     CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
--->
-<resources>
-    <string name="app_name" translatable="false">Night Shift Debug</string>
-    <string name="activity_main" translatable="false">Night Shift Debug</string>
-</resources>
+ */
+package com.systems.automaton.nightshift
+
+import android.animation.Animator
+import com.systems.automaton.nightshift.service.FilterService
+
+class CommandAnimatorListener(
+    private val cmd: Command,
+    private val svc: FilterService
+)
+    : Animator.AnimatorListener {
+
+    override fun onAnimationStart (a: Animator?) = cmd.onAnimationStart (svc)
+    override fun onAnimationEnd   (a: Animator?) = cmd.onAnimationEnd   (svc)
+    override fun onAnimationCancel(a: Animator?) = cmd.onAnimationCancel(svc)
+    override fun onAnimationRepeat(a: Animator?) = cmd.onAnimationRepeat(svc)
+}

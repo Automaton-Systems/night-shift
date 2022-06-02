@@ -19,7 +19,7 @@ use your phone comfortably at night.
 
 [<img src="https://gitlab.com/fdroid/artwork/raw/master/badge/get-it-on.png"
       alt="Get it on F-Droid"
-      height="80">](https://f-droid.org/repository/browse/?fdid=com.jmstudios.redmoon)
+      height="80">](https://f-droid.org/repository/browse/?fdid=com.systems.automaton.nightshift)
 [<img src="art/direct-apk-download.png"
       alt="Direct download"
       height="80">](https://github.com/raatmarien/red-moon/releases)

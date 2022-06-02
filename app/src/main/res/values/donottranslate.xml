@@ -75,7 +75,7 @@
   <string name="translation_url" translatable="false">https://hosted.weblate.org/engage/red-moon/</string>
 
   <!-- Notification channel slug -->
-  <string name="notification_channel_overlay_id" translatable="false">com.jmstudios.redmoon.overlay</string>
+  <string name="notification_channel_overlay_id" translatable="false">com.systems.automaton.nightshift.overlay</string>
 
   <string-array name="time_toggle_values_array"
                 translatable="false">
