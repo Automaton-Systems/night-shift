@@ -30,6 +30,7 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import com.systems.automaton.mindfullife.ads.AdManager
 import com.systems.automaton.nightshift.*
 
 import com.systems.automaton.nightshift.fragment.FilterFragment
@@ -65,6 +66,8 @@ class MainActivity : ThemedAppCompatActivity() {
 
         fab.setOnClickListener { _ -> Command.toggle() }
         fab.visibility = View.VISIBLE
+
+        AdManager.instance.showAd(this, true)
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {

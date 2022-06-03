@@ -6,10 +6,11 @@ android {
 
     defaultConfig {
         applicationId "com.systems.automaton.nightshift"
-        minSdkVersion 14
+        minSdkVersion 19
         targetSdkVersion 32
         versionCode 39
-        versionName "4.0.0"
+        versionName "3.5.1"
+        multiDexEnabled true
     }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
@@ -32,12 +33,12 @@ android {
 
 dependencies {
     // Android/platform deps
-    implementation 'androidx.core:core:1.7.0'
-    implementation 'androidx.appcompat:appcompat:1.4.1'
+    implementation 'androidx.core:core-ktx:1.8.0'
+    implementation 'androidx.appcompat:appcompat:1.4.2'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
-    implementation 'androidx.preference:preference:1.2.0'
     implementation 'androidx.preference:preference-ktx:1.2.0'
-    implementation 'com.google.android.material:material:1.6.0'
+    implementation 'androidx.preference:preference-ktx:1.2.0'
+    implementation 'com.google.android.material:material:1.6.1'
 
     // Written by me
     implementation project(":timepickerpreference")
@@ -49,6 +50,12 @@ dependencies {
     implementation 'com.github.topjohnwu.libsu:core:3.1.1'
     // annotationProcessor 'org.greenrobot:eventbus-annotation-processor:3.0.1'
 
+    implementation 'com.android.support:multidex:1.0.3'
+
+    implementation 'com.google.android.gms:play-services-ads:21.0.0'
+    implementation 'com.android.billingclient:billing:5.0.0'
+    implementation platform('com.google.firebase:firebase-bom:29.3.0')
+    implementation 'com.google.firebase:firebase-analytics-ktx'
 }
 
 repositories {

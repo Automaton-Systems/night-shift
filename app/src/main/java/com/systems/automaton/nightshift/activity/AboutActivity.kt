@@ -6,6 +6,7 @@
 package com.systems.automaton.nightshift.activity
 
 import android.os.Bundle
+import com.systems.automaton.mindfullife.ads.AdManager
 import com.systems.automaton.nightshift.fragment.AboutFragment
 
 class AboutActivity : ThemedAppCompatActivity() {
@@ -16,5 +17,7 @@ class AboutActivity : ThemedAppCompatActivity() {
         super.onCreate(savedInstanceState)
         supportActionBar?.setDisplayShowHomeEnabled(true)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
+        AdManager.instance.showAd(this)
     }
 }
