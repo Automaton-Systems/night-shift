@@ -10,7 +10,9 @@ import android.content.Context
 import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.preference.PreferenceManager
-import com.systems.automaton.nightshift.BuildConfig
+import com.systems.automaton.mindfullife.ads.AdManager
+import com.systems.automaton.mindfullife.ads.BillingManager
+import com.systems.automaton.mindfullife.ads.EventManager
 import com.systems.automaton.nightshift.helper.Logger
 import com.systems.automaton.nightshift.receiver.ScheduleReceiver
 import org.json.JSONObject
@@ -27,6 +29,11 @@ class RedMoonApplication: Application() {
         }
         AppCompatDelegate.setDefaultNightMode(theme)
         //EventBus.builder().addIndex(eventBusIndex()).installDefaultEventBus()
+
+        // Init.
+        AdManager.instance.initialize(this)
+        BillingManager.instance.initialize(this)
+        EventManager.instance.initialize(this)
     }
 
     private tailrec fun upgradeFrom(version: Int): Unit = when (version) {
