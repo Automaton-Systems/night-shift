@@ -1,4 +1,4 @@
-package com.systems.automaton.mindfullife.ads
+package com.systems.automaton.nightshift.ads
 
 import android.annotation.SuppressLint
 import android.app.Activity
@@ -35,14 +35,14 @@ class AdManager {
 
     fun showAd(activity: Activity, forceShowWhenReady: Boolean = false) {
 
-        if (forceShowWhenReady) {
-            forceShowWhenReadyActivity = activity
-        } else {
-            forceShowWhenReadyActivity = null
-        }
+        forceShowWhenReadyActivity = null
 
         if (isDisabled) {
             return
+        }
+
+        if (forceShowWhenReady) {
+            forceShowWhenReadyActivity = activity
         }
 
         if (mInterstitialAd != null) {
@@ -63,6 +63,7 @@ class AdManager {
             override fun onAdFailedToLoad(adError: LoadAdError) {
                 Log.d(TAG, adError.message)
                 mInterstitialAd = null
+                forceShowWhenReadyActivity = null
             }
 
             override fun onAdLoaded(interstitialAd: InterstitialAd) {
@@ -97,9 +98,11 @@ class AdManager {
     fun disableAds() {
         isDisabled = true
         mInterstitialAd = null
+        forceShowWhenReadyActivity = null
     }
 
     companion object {
+        @SuppressLint("StaticFieldLeak")
         val instance = AdManager()
     }
 }
@@ -113,18 +116,4 @@ fun Context.getActivity(): Activity? {
         lastKnownActivity = baseContext.getActivity()
     }
     return lastKnownActivity
-}
-
-fun Context.showAd() = run {
-    val activity = this.getActivity()
-    activity?.let {
-        AdManager.instance.showAd(it)
-    }
-}
-
-fun Context.launchBuy() = run {
-    val activity = this.getActivity()
-    activity?.let {
-        BillingManager.instance.buy(it)
-    }
 }

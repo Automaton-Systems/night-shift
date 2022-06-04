@@ -6,7 +6,7 @@
 package com.systems.automaton.nightshift.activity
 
 import android.os.Bundle
-import com.systems.automaton.mindfullife.ads.AdManager
+import com.systems.automaton.nightshift.ads.AdManager
 import com.systems.automaton.nightshift.fragment.AboutFragment
 
 class AboutActivity : ThemedAppCompatActivity() {
