@@ -6,6 +6,12 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <PreferenceCategory android:title="@string/pref_category_ads">
+        <Preference android:title="@string/pref_title_remove_ads"
+            android:key="pref_remove_ads"
+            android:summary="@string/pref_summary_remove_ads" />
+    </PreferenceCategory>
+
     <PreferenceCategory android:title="@string/pref_category_schedule">
 
         <SwitchPreference

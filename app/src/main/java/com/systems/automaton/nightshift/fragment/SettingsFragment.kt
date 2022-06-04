@@ -27,6 +27,9 @@ import com.systems.automaton.nightshift.locationChanged
 import com.systems.automaton.nightshift.locationService
 import com.systems.automaton.nightshift.pref
 import com.systems.automaton.nightshift.R
+import com.systems.automaton.nightshift.ads.AdManager
+import com.systems.automaton.nightshift.ads.BillingManager
+import com.systems.automaton.nightshift.ads.getActivity
 import com.systems.automaton.nightshift.scheduleChanged
 import com.systems.automaton.nightshift.service.LocationUpdateService
 import com.systems.automaton.nightshift.useLocationChanged
@@ -38,6 +41,9 @@ import org.libreshift.preferences.TimePreferenceDialogFragmentCompat
 
 
 class SettingsFragment : PreferenceFragmentCompat() {
+    private val removeAdsPref: Preference
+        get() = pref(R.string.pref_remove_ads) as Preference
+
     private val automaticTurnOnPref: TimePreference
         get() = pref(R.string.pref_key_start_time) as TimePreference
 
@@ -60,6 +66,22 @@ class SettingsFragment : PreferenceFragmentCompat() {
 
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
         setPreferencesFromResource(R.xml.settings, rootKey)
+
+        if (AdManager.instance.isDisabled) {
+            removeAdsPref.title = getString(R.string.pref_title_remove_ads_removed)
+            removeAdsPref.summary = ""
+            removeAdsPref.setOnPreferenceClickListener {
+                Toast.makeText(context, getString(R.string.thank_you_purchase), Toast.LENGTH_SHORT).show()
+                true
+            }
+        } else {
+            removeAdsPref.setOnPreferenceClickListener {
+                context?.getActivity()?.let {
+                    BillingManager.instance.buy(it)
+                }
+                true
+            }
+        }
 
         themePref.setOnPreferenceChangeListener { _, newValue ->
             val theme = when (newValue as Boolean) {

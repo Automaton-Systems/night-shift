@@ -43,7 +43,7 @@
     <string name="menu_about">About</string>
 
     <!-- Notification -->
-    <string name="notification_status_running">Running. Turn off to install apks</string>
+    <string name="notification_status_running">Running…</string>
     <string name="notification_status_running_no_warning">Running</string>
     <string name="notification_status_paused">Paused</string>
     <string name="notification_status_paused_with_info">Paused. Dismiss notification to stop.</string>
@@ -63,12 +63,16 @@
     <string name="pref_category_other">Other</string>
     <string name="pref_category_button_backlight_disclaimer">No effect on some devices</string>
     <string name="pref_category_schedule">Schedule</string>
+    <string name="pref_category_ads">Ads</string>
 
     <string name="pref_title_dim_level">Darkness</string>
     <string name="pref_title_intensity">Opacity</string>
     <string name="pref_title_color_temp">Color</string>
     <string name="pref_title_lower_brightness">Lower system brightness</string>
 
+    <string name="pref_title_remove_ads">Remove Ads</string>
+    <string name="pref_title_remove_ads_removed">Premium Edition - Ads Removed!</string>
+    <string name="pref_summary_remove_ads">Remove ads from the app, forever.</string>
     <string name="pref_title_time_toggle">Timer</string>
     <string name="pref_title_schedule">Run as scheduled</string>
     <!-- Start and stop times will be substituted for %on and %off -->
@@ -108,17 +112,8 @@
     <!-- About subscreen -->
     <string name="pref_title_version">Version</string>
 
-    <string name="pref_title_project_page">Visit the project page</string>
-    <string name="pref_summary_project_page">Find more info, leave feedback, and contribute</string>
-
-    <string name="pref_title_email_developer">Email the developers</string>
-    <string name="pref_summary_email_developer">A secondary way to contact us</string>
-    <string name="pref_title_translators">Help translate</string>
-    <!-- Add your name or handle here if you would like credit in the app -->
-    <string name="pref_summary_translators">Translators: smichel17, raatmarien, Mostafa Ahangarha</string>
-
-    <string name="pref_title_integration">Integration with other apps</string>
-    <string name="pref_summary_integration">Some apps, like LibreTasks or Tasker, allow you to automate tasks when certain events happen. Night Shift sends a public notification when it turns on and off, so those apps can respond. If you don\'t use or develop one of those apps, you can ignore the next paragraph.\n\nNight Shift broadcasts a public intent with the action `com.systems.automaton.nightshift.RED_MOON_TOGGLED`. The intent contains a boolean extra with the key `jmstudios.bundle.key.FILTER_IS_ON`, which indicates whether Night Shift is toggling on or off.</string>
+    <string name="pref_title_project_page">Source code and attributions</string>
+    <string name="pref_summary_project_page">View the source for this app, license attributions and privacy policy.</string>
 
     <!-- Toasts -->
     <string name="toast_warning_install">You won\'t be able to install APKs while the Night Shift is on.</string>
