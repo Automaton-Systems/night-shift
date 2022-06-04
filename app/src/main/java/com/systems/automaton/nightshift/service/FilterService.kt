@@ -76,6 +76,7 @@ class FilterService : Service() {
                mFilter.profile = valueAnimator.animatedValue as Profile
             }
         }
+        startForeground(NOTIFICATION_ID, mNotification.build(false))
     }
 
     override fun onStartCommand(intent: Intent, flags: Int, startId: Int): Int {
