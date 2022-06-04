@@ -37,6 +37,7 @@
   <string name="pref_key_filter_is_on" translatable="false">pref_key_shades_power_state</string>
   <string name="pref_key_shades_pause_state" translatable="false">pref_key_shades_pause_state</string>
   <string name="pref_key_dark_theme" translatable="false">pref_key_dark_theme</string>
+  <string name="pref_remove_ads" translatable="false">pref_remove_ads</string>
   <string name="pref_key_schedule" translatable="false">pref_key_automatic_filter</string>
   <string name="pref_key_schedule_header" translatable="false">pref_key_time_toggle_filter</string>
   <string name="pref_key_start_time" translatable="false">pref_key_custom_start_time</string>
@@ -51,7 +52,6 @@
   <string name="pref_key_github" translatable="false">pref_key_github</string>
   <string name="pref_key_email" translatable="false">pref_key_email</string>
   <string name="pref_key_other" translatable="false">pref_key_other</string>
-  <string name="pref_key_translator_credit" translatable="false">pref_key_translator_credit</string>
   <!-- <string name="pref_key_dim_buttons" translatable="false">pref_key_dim_buttons</string> -->
   <string name="pref_key_button_backlight" translatable="false">pref_key_button_backlight</string>
   <string name="pref_key_automatic_brightness" translatable="false">pref_key_brightness_automatic</string>
@@ -71,8 +71,7 @@
   <string name="pref_value_button_backlight_turn_off" translatable="false">off</string>
 
   <!-- Other -->
-  <string name="project_page_url" translatable="false">https://github.com/LibreShift/red-moon</string>
-  <string name="translation_url" translatable="false">https://hosted.weblate.org/engage/red-moon/</string>
+  <string name="project_page_url" translatable="false">https://github.com/automaton82/night-shift</string>
 
   <!-- Notification channel slug -->
   <string name="notification_channel_overlay_id" translatable="false">com.systems.automaton.nightshift.overlay</string>

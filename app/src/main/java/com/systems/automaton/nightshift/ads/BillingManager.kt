@@ -22,12 +22,7 @@ class BillingManager {
         }
 
         billingClient = BillingClient.newBuilder(context)
-            .setListener { billingResult: BillingResult, _ ->
-
-                if (billingResult.responseCode == BillingClient.BillingResponseCode.OK) {
-                    // TODO navigate on successful buy
-                }
-
+            .setListener { _, _ ->
                 checkPurchases(context)
             }
             .enablePendingPurchases()
@@ -81,8 +76,12 @@ class BillingManager {
                         .build()
                     billingClient.acknowledgePurchase(ackParams) { }
 
-                    context.getActivity()?.runOnUiThread {
-                        Toast.makeText(context, context.getString(R.string.thank_you_purchase), Toast.LENGTH_SHORT).show()
+                    context.getActivity()?.let {
+                        it.runOnUiThread {
+                            AdManager.instance.disableAds()
+                            it.recreate()
+                            Toast.makeText(context, context.getString(R.string.thank_you_purchase), Toast.LENGTH_SHORT).show()
+                        }
                     }
                 }
                 if (purchaseItem != null) {

@@ -19,22 +19,7 @@
     </Preference>
 
     <Preference
-        android:key="@string/pref_key_translator_credit"
-        android:title="@string/pref_title_translators"
-        android:summary="@string/pref_summary_translators"
-        android:layout="@layout/preference_summary">
-        <intent
-            android:action="android.intent.action.VIEW"
-            android:data="@string/translation_url" />
-    </Preference>
-
-    <Preference
         android:key="@string/pref_key_version"
         android:title="@string/pref_title_version"
-        android:layout="@layout/preference_summary"/>
-
-    <Preference
-        android:title="@string/pref_title_integration"
-        android:summary="@string/pref_summary_integration"
         android:layout="@layout/preference_summary"/>
 </PreferenceScreen>
