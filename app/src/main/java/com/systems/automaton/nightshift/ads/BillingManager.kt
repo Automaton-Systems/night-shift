@@ -1,4 +1,4 @@
-package com.systems.automaton.mindfullife.ads
+package com.systems.automaton.nightshift.ads
 
 import android.app.Activity
 import android.content.Context

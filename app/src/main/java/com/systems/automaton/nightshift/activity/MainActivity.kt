@@ -30,14 +30,13 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import com.google.android.material.floatingactionbutton.FloatingActionButton
-import com.systems.automaton.mindfullife.ads.AdManager
+import com.systems.automaton.nightshift.ads.AdManager
 import com.systems.automaton.nightshift.*
 
 import com.systems.automaton.nightshift.fragment.FilterFragment
 import com.systems.automaton.nightshift.helper.Logger
 import com.systems.automaton.nightshift.helper.Permission
 import com.systems.automaton.nightshift.ProfilesModel
-import com.systems.automaton.nightshift.*
 
 import org.greenrobot.eventbus.Subscribe
 

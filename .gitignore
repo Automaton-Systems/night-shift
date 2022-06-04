@@ -9,4 +9,4 @@ local.properties
 .idea/
 /**/*/res/values/secrets.xml
 *.aab
-
+google-services.json

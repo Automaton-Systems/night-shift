@@ -8,7 +8,7 @@ import android.os.Bundle
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
-import com.systems.automaton.mindfullife.ads.AdManager
+import com.systems.automaton.nightshift.ads.AdManager
 
 import com.systems.automaton.nightshift.helper.Logger
 import com.systems.automaton.nightshift.R
