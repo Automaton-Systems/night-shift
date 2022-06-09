@@ -1,2 +1,3 @@
+rootProject.name = "Night Shift"
 include ':app'
 include ':timepickerpreference'
