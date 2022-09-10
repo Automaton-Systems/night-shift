@@ -30,25 +30,13 @@ import android.app.Service
 import android.content.Intent
 import android.os.IBinder
 import android.widget.Toast
+import com.systems.automaton.nightshift.*
 import java.util.concurrent.Executors
-import com.systems.automaton.nightshift.Command
-import com.systems.automaton.nightshift.CommandAnimatorListener
-import com.systems.automaton.nightshift.Config
 
-import com.systems.automaton.nightshift.activeProfile
-import com.systems.automaton.nightshift.EventBus
-import com.systems.automaton.nightshift.Filter
-import com.systems.automaton.nightshift.filterIsOn
 import com.systems.automaton.nightshift.filter.surfaceflinger.SurfaceFlinger
 import com.systems.automaton.nightshift.helper.Logger
 import com.systems.automaton.nightshift.helper.Permission
 import com.systems.automaton.nightshift.manager.CurrentAppMonitor
-import com.systems.automaton.nightshift.Notification
-import com.systems.automaton.nightshift.Overlay
-import com.systems.automaton.nightshift.overlayPermissionDenied
-import com.systems.automaton.nightshift.Profile
-import com.systems.automaton.nightshift.ProfileEvaluator
-import com.systems.automaton.nightshift.secureSuspendChanged
 
 import org.greenrobot.eventbus.Subscribe
 import com.topjohnwu.superuser.Shell
