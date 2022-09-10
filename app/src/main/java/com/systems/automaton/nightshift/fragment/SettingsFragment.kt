@@ -14,25 +14,14 @@ import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
 import androidx.preference.SwitchPreference
 import com.google.android.material.snackbar.Snackbar
-import com.systems.automaton.nightshift.Command
+import com.systems.automaton.nightshift.*
 
-import com.systems.automaton.nightshift.Config
-import com.systems.automaton.nightshift.EventBus
-import com.systems.automaton.nightshift.getColor
 import com.systems.automaton.nightshift.helper.Logger
 import com.systems.automaton.nightshift.helper.Permission
-import com.systems.automaton.nightshift.inActivePeriod
-import com.systems.automaton.nightshift.locationAccessDenied
-import com.systems.automaton.nightshift.locationChanged
-import com.systems.automaton.nightshift.locationService
-import com.systems.automaton.nightshift.pref
-import com.systems.automaton.nightshift.R
 import com.systems.automaton.nightshift.ads.AdManager
 import com.systems.automaton.nightshift.ads.BillingManager
 import com.systems.automaton.nightshift.ads.getActivity
-import com.systems.automaton.nightshift.scheduleChanged
 import com.systems.automaton.nightshift.service.LocationUpdateService
-import com.systems.automaton.nightshift.useLocationChanged
 
 import com.topjohnwu.superuser.Shell
 import org.greenrobot.eventbus.Subscribe
