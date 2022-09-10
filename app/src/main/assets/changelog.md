@@ -1,20 +1,27 @@
 # Changelog
-All notable changes to this project will be documented in this file. The format is based on [Keep a Changelog], and this project follows [Semantic Versioning].
 
-## [4.0.0] — ????-??-??
+## [4.0.0] — 2022-08-14
 ### Added
-- Start and stop times can be set to sunset and sunrise individually
+- Root Mode BETA (@notjuliee). BETA means it is not tested on many devices. Make sure you can reboot your phone without looking at the screen, just in case.
+- Initial/incomplete support for Android 12 (@AdamNiederer).
+- Start/stop times can be set to sunset/sunrise individually
+- Settings screen with all non-profile preferences
+- Hebrew translation (@Shopimisrel) and many other translation updates
 
 ### Changed
 - All non-filter preferences moved to their own screen
-- Replaced top switch with floating action button
+- Revert top switch toggle back to a floating button
 - Prevent changing filter preferences until overlay permission is granted
 
 ### Fixed
-- Time preferences display summary in proper locale
+- Time preference summary now displays in proper locale
+- Fixed crash when toggling via the tile (@gilbsgilbs and @automaton82)
+- Maybe fixed filter sometimes not turning on the very first time after installation
 
 ### Removed
 - Removed "Sunrise to Sunset" preference, since you can set them individually
+- Removed separate Google Play version (which included a prompt to rate the app)
+- Removed Red Moon from the Google Play Store
 
 ## [3.5.0] — 2020-03-01
 ### Added
@@ -219,6 +226,9 @@ All notable changes to this project will be documented in this file. The format 
 ### Removed
 - Remove the floating button (since the top switch does this now)
 
+---
+
+All notable changes to this project will be documented in this file. The format is based on [Keep a Changelog], and this project follows [Semantic Versioning].
 
 [Keep a Changelog]: https://keepachangelog.com/en/1.0.0/
 [Semantic Versioning]: https://semver.org/spec/v2.0.0.html

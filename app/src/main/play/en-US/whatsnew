@@ -1,11 +1,21 @@
 ### Added
-- Filter toggles when the schedule is updated
+- Root Mode BETA (@notjuliee). BETA means it is not tested on many devices. Make sure you can reboot your phone without looking at the screen, just in case.
+- Initial/incomplete support for Android 12 (@AdamNiederer).
+- Start/stop times can be set to sunset/sunrise individually
+- Settings screen with all non-profile preferences
+- Hebrew translation (@Shopimisrel)
 
 ### Changed
-- Update translations
+- All non-filter preferences moved to their own screen
+- Revert top switch toggle back to a floating button
+- Prevent changing filter preferences until overlay permission is granted
 
 ### Fixed
-- Fix alignment in on/off switch at the top of schedule/exclude screens
+- Time preference summary now displays in proper locale
+- Fixed crash when toggling via the tile (@gilbsgilbs and @automaton82)
+- Maybe fixed filter sometimes not turning on the very first time after installation
 
 ### Removed
-- Remove prompt to rate the app from the Google Play version
+- Removed "Sunrise to Sunset" preference, since you can set them individually
+- Removed separate Google Play version (which included a prompt to rate the app)
+- Removed Red Moon from the Google Play Store

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="activity_intro">הקדמה</string>
+    <string name="activity_settings">הגדרות</string>
+    <string name="activity_about">אודות Red Moon</string>
+    <string name="activity_secure_suspend">השהה באפליקציות שלא נכללו</string>
+    <string name="activity_schedule">לוח זמנים</string>
+    <string name="activity_timer">שעון עצר</string>
+    <string name="menu_restore_default_filters">שחזר למסנני ברירת מחדל</string>
+    <string name="menu_show_intro">הפעלה חוזרת של הקדמה</string>
+    <string name="menu_about">אודות</string>
+    <string name="notification_status_running_no_warning">מופעל</string>
+    <string name="notification_status_paused">מושהה</string>
+    <string name="notification_action_pause">השהה</string>
+    <string name="notification_action_turn_on">הפעל</string>
+    <string name="notification_action_turn_off">כבה</string>
+    <string name="notification_action_stop">עצור</string>
+    <string name="notification_action_whitelist_remove">אפליקציית סינון</string>
+    <string name="notification_action_next_filter">המסנן הבא</string>
+    <string name="pref_category_filter">סנן</string>
+    <string name="pref_category_other">אחר</string>
+    <string name="pref_category_button_backlight_disclaimer">אין השפעה על מכשירים מסוימים</string>
+    <string name="pref_title_dim_level">חושך</string>
+    <string name="pref_title_color_temp">צבע</string>
+    <string name="pref_title_time_toggle">שעון עצר</string>
+    <string name="pref_summary_schedule_sun" formatted="false">שקיעה (%on) עד זריחה (%off)</string>
+    <string name="pref_title_stop_time">זמן עצירה</string>
+    <string name="pref_value_stop_time_sunrise">זריחה</string>
+    <string name="pref_summary_stop_time_sunrise">זריחה (%s)</string>
+    <string name="pref_title_use_location">שקיעה עד זריחה</string>
+    <string name="pref_summary_use_location">בהתבסס על המיקום שלך</string>
+    <string name="pref_title_location">מיקום</string>
+    <string name="pref_title_dark_theme">ערכת נושא כהה</string>
+    <string name="pref_title_use_root">מצב שורש</string>
+    <string name="button_add_filter">הוסף</string>
+    <string name="button_remove_filter">מחק</string>
+    <string name="text_switch_on">דלוק</string>
+    <string name="text_switch_off">כבוי</string>
+    <string name="location_not_set">מיקום לא מוגדר</string>
+    <string name="longitude_short">ארוך</string>
+    <string name="pref_title_version">גירסה</string>
+    <string name="pref_title_project_page">בקר בדף הפרויקט</string>
+    <string name="pref_summary_project_page">מצא מידע נוסף, השאר משוב ותרום</string>
+    <string name="pref_title_email_developer">שלח דוא\"ל למפתח</string>
+    <string name="pref_summary_email_developer">דרך משנית ליצור איתנו קשר</string>
+    <string name="pref_title_translators">עזור לתרגם</string>
+    <string name="pref_summary_translators">מתרגמים: smichel17, raatmarien, מוסטפה אהנגרהה נחמן מזוז</string>
+    <string name="latitude_short">lat</string>
+    <string name="toast_warning_install">לא תוכל להתקין חבילות APK בזמן שred moon פועל.</string>
+    <string name="toast_warning_secured">ייתכן שחלק מהתכונות של אפליקציה זו לא יפעלו בזמן שRed Moon פועל.</string>
+    <string name="snackbar_warning_no_location">אפשר שירותי מיקום כדי לעדכן מיקום</string>
+    <string name="snackbar_searching_location">מחפש מיקום</string>
+    <string name="snackbar_location_updated">נמצא מיקום!</string>
+    <string name="help_snackbar_text">לחץ על המתג כדי להפעיל Red Moon</string>
+    <string name="dialog_title_add_filter">הזן את שם המסנן</string>
+    <string name="edit_hint_add_filter">שם מסנן</string>
+    <string name="dialog_title_remove_filter">למחוק את המסנן הזה\?</string>
+    <string name="dialog_title_permission_overlay">תצוגה מעל אפליקציות אחרות</string>
+    <string name="dialog_message_permission_usage_stats">אפשר גישת שימוש במסך הבא כדי לאפשר לירח אדום להשהות באפליקציות מאובטחות.
+\n
+\nRed Moon ישתמש בנתונים אלה רק כדי לקבוע אם אתה משתמש באפליקציה שלא תעבוד כאשר Red Moon פועל.</string>
+    <string name="dialog_button_ok">אוקיי</string>
+    <string name="dialog_button_cancel">לבטל</string>
+    <string name="slide_text_welcome">ברוכים הבאים לRed Moon!</string>
+    <string name="slide_title_protect_eyes">מגן על העיניים שלך</string>
+    <string name="slide_text_protect_eyes">בלילה, כשהתבוננות בטלפון שלך פוגעת בעיניים, אתה יכול להשתמש בירח אדום כדי לעמעם את המסך.</string>
+    <string name="slide_title_improve_sleep">שיפור השינה שלך</string>
+    <string name="slide_text_improve_sleep">אור כחול מדכא את ייצור המלטונין, הורמון שעוזר לך להירדם בלילה. ירח אדום מסיר את האור הכחול מהמסך שלך, ומבטיח שאתה יכול להירדם בקלות.</string>
+    <string name="slide_title_get_started">בוא נתחיל!</string>
+    <string name="slide_text_get_started">הפעל וכבה את הRed Moon עם המתג בפינה הימנית העליונה.</string>
+    <string name="filter_name_custom">מותאם אישית</string>
+    <string name="filter_name_bed_reading">קריאה</string>
+    <string name="filter_name_dim_only">עמום בלבד</string>
+    <string name="pref_entry_button_backlight_system">מערכת מנוהלת</string>
+    <string name="pref_entry_button_backlight_turn_off">כבה</string>
+    <string name="add_new_profile_dialog_title">הזן שם פרופיל</string>
+    <string name="add_new_profile_edit_hint">שם פרופיל</string>
+    <string name="remove_profile_dialog_title">למחוק את הפרופיל הזה\?</string>
+    <string name="pref_title_appearance">פרופיל</string>
+    <string name="toast_warning_no_location">אפשר שירותי מיקום כדי לעדכן מיקום</string>
+    <string name="set_dialog">מערכת</string>
+    <string name="time_toggle_title">החלפה אוטומטית</string>
+    <string name="notification_status_paused_with_info">מושהה. בטל הודעה כדי להפסיק.</string>
+    <string name="app_name">Red Moon</string>
+    <string name="activity_main">Red Moon</string>
+    <string name="pref_title_startup">הרץ בהפעלת הטלפון</string>
+    <string name="menu_dark_theme">ערכת נושא כהה</string>
+    <string name="pref_title_turn_on">הפעל בשעה</string>
+    <string name="pref_title_turn_off">כבה בשעה</string>
+    <string name="time_toggle_options_array_0">ידני</string>
+    <string name="time_toggle_options_array_1">אוטומטי (שמש)</string>
+    <string name="time_toggle_options_array_2">אוטומטי (מותאם אישית)</string>
+    <string name="notification_channel_overlay_name">בקרת שכבת-על</string>
+    <string name="notification_status_running">מופעל. כבה כדי להתקין apks</string>
+    <string name="menu_settings">הגדרות</string>
+    <string name="notification_action_resume">קורות חיים</string>
+    <string name="activity_shortcut">החלפת Red Moon</string>
+    <string name="notification_status_off">כבוי</string>
+    <string name="pref_title_lower_brightness">בהירות מערכת נמוכה יותר</string>
+    <string name="pref_title_schedule">הפעל כמתוכנן</string>
+    <string name="pref_title_start_time">שעת התחלה</string>
+    <string name="notification_action_whitelist_add">אל תכלול אפליקציה</string>
+    <string name="pref_category_schedule">לוח זמנים</string>
+    <string name="pref_title_intensity">אטימות</string>
+    <string name="pref_summary_start_time_sunset">שקיעה (%s)</string>
+    <string name="pref_value_start_time_sunset">שקיעת השמש</string>
+    <string name="pref_summary_schedule_custom" formatted="false">מותאם אישית (%on to %off)</string>
+    <string name="pref_summary_schedule_none">ללא</string>
+    <string name="pref_title_secure_suspend">השהה באפליקציות שלא נכללו</string>
+    <string name="pref_title_button_backlight">תאורה אחורית של לחצן חומרה</string>
+    <string name="pref_summary_secure_suspend">כאשר תכונה זו מופעלת, ירח אדום ישהה אוטומטית כאשר אפליקציות מסוימות פתוחות. כברירת מחדל, זה כולל אפליקציות שלא יעבדו כאשר Red Moon פועל*, כמו התקנת apks. אתה יכול לשנות התנהגות זו עבור המסך הנוכחי של האפליקציה הנוכחית מההודעה. לדוגמה, ייתכן שתרצה להוסיף אפליקציות רגישות לצבע, כמו המצלמה.
+\n
+\n תכונה זו עשויה להפחית מעט את חיי הסוללה של המכשיר שלך.
+\n
+\n *חלק מהאפליקציות מאובטחות מפני שכבות על מנת להגן על עצמן מהפרעות, כמו להערים עליך להתקין אפליקציה שאינך רוצה. הם לא יגיבו למגע כאשר הירח האדום פועל, מכיוון שהוא פועל על ידי ציור שכבה אדומה שקופה על המסך.</string>
+    <string name="pref_summary_integration">אפליקציות מסוימות, כמו LibreTasks או Tasker, מאפשרות לך להפוך משימות לאוטומטיות כאשר מתרחשים אירועים מסוימים. הירח האדום שולח הודעה ציבורית כאשר הוא נדלק וכיבוי, כדי שהאפליקציות הללו יוכלו להגיב. אם אינך משתמש או מפתח באחת מהאפליקציות הללו, תוכל להתעלם מהפסקה הבאה.
+\n
+\n Red Moon משדר כוונה פומבית עם הפעולה `com.jmstudios.redmoon.RED_MOON_TOGGLED`. הכוונה מכילה תוספת בוליאנית עם המפתח `jmstudios.bundle.key.FILTER_IS_ON`, המציין אם Red Moon מופעל או כבוי.</string>
+    <string name="slide_title_welcome">ברוך הבא!</string>
+    <string name="pref_title_integration">אינטגרציה עם אפליקציות אחרות</string>
+    <string name="dialog_title_permission_write_settings">שינוי הגדרות המערכת</string>
+    <string name="shortcut_title_toggle">החלף Red Moon</string>
+    <string name="dialog_message_permission_overlay">אפשר לשרטט על אפליקציות אחרות במסך הבא כדי לאפשר לירח אדום להפעיל.</string>
+    <string name="dialog_message_permission_write_settings">אפשר לשנות את הגדרות המערכת במסך הבא כדי לאפשר לירח אדום לשנות את רמת הבהירות שלך.</string>
+    <string name="dialog_title_permission_usage_stats">גישה לשימוש</string>
+    <string name="filter_name_default">ברירת מחדל</string>
+    <string name="pref_entry_button_backlight_filter_dim_level">השתמש ברמת עמום מסנן</string>
+    <string name="action_next_profile">הפרופיל הבא</string>
+    <string name="searching_location">מחפש מיקום</string>
+    <string name="notification_channel_overlay_description">הודעת בקרת שכבת-על המתמשכת</string>
+    <string name="toast_root_unavailable">Red Moon: השורש אינו זמין. השבתת מצב שורש.</string>
+    <string name="pref_summary_use_root">מסנן באיכות גבוהה יותר, במיוחד עם רקע כהה. דורש מכשיר מושרש עם Magisk.</string>
+</resources>

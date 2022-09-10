@@ -29,6 +29,7 @@ import android.animation.ValueAnimator
 import android.app.Service
 import android.content.Intent
 import android.os.IBinder
+import android.widget.Toast
 import java.util.concurrent.Executors
 import com.systems.automaton.nightshift.Command
 import com.systems.automaton.nightshift.CommandAnimatorListener
@@ -50,6 +51,7 @@ import com.systems.automaton.nightshift.ProfileEvaluator
 import com.systems.automaton.nightshift.secureSuspendChanged
 
 import org.greenrobot.eventbus.Subscribe
+import com.topjohnwu.superuser.Shell
 
 class FilterService : Service() {
 
@@ -81,7 +83,7 @@ class FilterService : Service() {
 
     override fun onStartCommand(intent: Intent, flags: Int, startId: Int): Int {
         Log.i("onStartCommand($intent, $flags, $startId)")
-        if (Permission.Overlay.isGranted || Config.useRoot) {
+        fun fadeInOrOut() {
             val cmd = Command.getCommand(intent)
             val end = if (cmd.turnOn) activeProfile else mFilter.profile.off
             mAnimator.run {
@@ -93,10 +95,25 @@ class FilterService : Service() {
                 Log.i("Animating from ${mFilter.profile} to $end in $duration")
                 start()
             }
+        }
+        if (Config.useRoot) {
+            val hasRoot = Shell.rootAccess()
+            if (hasRoot) {
+                fadeInOrOut()
+            } else {
+                Log.i("Root permission denied. Disabling root mode.")
+                Toast.makeText(this, R.string.toast_root_unavailable, Toast.LENGTH_SHORT).show()
+                Config.useRoot = false;
+                stopForeground(false)
+            }
         } else {
-            Log.i("Overlay permission denied.")
-            EventBus.post(overlayPermissionDenied())
-            stopForeground(false)
+            if (Permission.Overlay.isGranted) {
+                fadeInOrOut()
+            } else {
+                Log.i("Overlay permission denied.")
+                EventBus.post(overlayPermissionDenied())
+                stopForeground(false)
+            }
         }
 
         // Do not attempt to restart if the hosting process is killed by Android

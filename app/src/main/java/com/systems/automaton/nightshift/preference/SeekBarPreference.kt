@@ -99,7 +99,12 @@ abstract class SeekBarPreference(context: Context, attrs: AttributeSet) : Prefer
     companion object : Logger() {
         private var pressesActive: Int = 0
             set(value) {
-                Command.preview(value != 0)
+                val wasOn = field != 0;
+                val isOn = value != 0;
+                // Only toggle if needed
+                if (wasOn != isOn) {
+                    Command.preview(isOn)
+                }
                 field = value
             }
     }
