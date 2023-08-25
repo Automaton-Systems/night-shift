@@ -33,8 +33,8 @@ class CommandAnimatorListener(
 )
     : Animator.AnimatorListener {
 
-    override fun onAnimationStart (a: Animator?) = cmd.onAnimationStart (svc)
-    override fun onAnimationEnd   (a: Animator?) = cmd.onAnimationEnd   (svc)
-    override fun onAnimationCancel(a: Animator?) = cmd.onAnimationCancel(svc)
-    override fun onAnimationRepeat(a: Animator?) = cmd.onAnimationRepeat(svc)
+    override fun onAnimationStart (a: Animator) = cmd.onAnimationStart (svc)
+    override fun onAnimationEnd   (a: Animator) = cmd.onAnimationEnd   (svc)
+    override fun onAnimationCancel(a: Animator) = cmd.onAnimationCancel(svc)
+    override fun onAnimationRepeat(a: Animator) = cmd.onAnimationRepeat(svc)
 }
