@@ -10,3 +10,4 @@ local.properties
 /**/*/res/values/secrets.xml
 *.aab
 google-services.json
+**/.DS_Store

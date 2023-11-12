@@ -3,14 +3,14 @@ apply plugin: 'kotlin-android'
 apply plugin: 'com.google.gms.google-services'
 
 android {
-    compileSdkVersion 33
+    compileSdk 33
 
     defaultConfig {
         applicationId "com.systems.automaton.nightshift"
         minSdkVersion 19
         targetSdkVersion 33
-        versionCode 42
-        versionName "4.0.2"
+        versionCode 45
+        versionName "4.0.5"
         multiDexEnabled true
     }
     compileOptions {
