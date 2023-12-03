@@ -66,7 +66,7 @@ class MainActivity : ThemedAppCompatActivity() {
         fab.setOnClickListener { _ -> Command.toggle() }
         fab.visibility = View.VISIBLE
 
-        AdManager.instance.showAd(this, true)
+        if (Config.introShown) { AdManager.instance.showAd(this, true) }
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {

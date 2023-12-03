@@ -9,8 +9,8 @@ android {
         applicationId "com.systems.automaton.nightshift"
         minSdkVersion 19
         targetSdkVersion 33
-        versionCode 45
-        versionName "4.0.5"
+        versionCode 46
+        versionName "4.0.6"
         multiDexEnabled true
     }
     compileOptions {
