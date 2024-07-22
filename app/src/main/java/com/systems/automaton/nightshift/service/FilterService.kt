@@ -28,6 +28,7 @@ package com.systems.automaton.nightshift.service
 import android.animation.ValueAnimator
 import android.app.Service
 import android.content.Intent
+import android.content.pm.ServiceInfo.FOREGROUND_SERVICE_TYPE_SPECIAL_USE
 import android.os.IBinder
 import android.widget.Toast
 import com.systems.automaton.nightshift.*
@@ -66,7 +67,7 @@ class FilterService : Service() {
                mFilter.profile = valueAnimator.animatedValue as Profile
             }
         }
-        startForeground(NOTIFICATION_ID, mNotification.build(false))
+        startForeground(NOTIFICATION_ID, mNotification.build(false), FOREGROUND_SERVICE_TYPE_SPECIAL_USE)
     }
 
     override fun onStartCommand(intent: Intent, flags: Int, startId: Int): Int {
@@ -114,7 +115,7 @@ class FilterService : Service() {
             filterIsOn = true
             mCurrentAppMonitor.monitoring = Config.secureSuspend
         }
-        startForeground(NOTIFICATION_ID, mNotification.build(isOn))
+        startForeground(NOTIFICATION_ID, mNotification.build(isOn), FOREGROUND_SERVICE_TYPE_SPECIAL_USE)
     }
 
     override fun onDestroy() {
@@ -132,7 +133,7 @@ class FilterService : Service() {
 
     @Subscribe fun onProfileUpdated(profile: Profile) {
         mFilter.profile = profile
-        startForeground(NOTIFICATION_ID, mNotification.build(true))
+        startForeground(NOTIFICATION_ID, mNotification.build(true), FOREGROUND_SERVICE_TYPE_SPECIAL_USE)
     }
 
     @Subscribe fun onSecureSuspendChanged(event: secureSuspendChanged) {

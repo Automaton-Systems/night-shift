@@ -12,8 +12,8 @@ buildscript {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
 
         // 3rd party
-        classpath "org.ajoberstar.grgit:grgit-core:$grgit_version"
-        classpath "org.ajoberstar.grgit:grgit-gradle:$grgit_version"
+        //classpath "org.ajoberstar.grgit:grgit-core:$grgit_version"
+        //classpath "org.ajoberstar.grgit:grgit-gradle:$grgit_version"
 
         classpath 'com.google.gms:google-services:4.3.13'
 
